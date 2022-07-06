@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -9,6 +12,13 @@
     --nav-bg: black;
     --main-bg: #141922;
     --player-bg: #282828;
+    --upgrade-bar-bg: rgba(0, 0, 0, 0.6);
+    --text-color: #A3A3A3;
+}
+
+
+a{
+    text-decoration: none;
 }
 
 .vp-container{
@@ -26,16 +36,33 @@ main{
     height: 100%;
     background-color: var(--nav-bg);
     color: white;
+    padding-left: 20px;
 }
 
 
 /* MAIN CONTENT */
 .main-content{
-    width: 100%;
+    width: calc(100% - 250px);
     height: 100%;
     background-color: var(--main-bg);
 }
-
+/* Top bar */
+.upgrade-bar{
+    width: calc(100% - 250px);
+    height: 100px;
+    background-color:var(--upgrade-bar-bg);
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.upgrade-button{
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 40px;
+    padding: 15px 35px;
+    margin-right: 2rem;
+}
 
 /* PLAYER */
 .player{
@@ -45,4 +72,23 @@ main{
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+    padding: 1rem 0.75rem;
+}
+
+.player__song{
+    display: flex;
+    width: 250px;    
+}
+.song__cover img{
+    height: 100%;
+}
+
+.player__toolbar{
+    flex-grow: 1;
+    background-color: red;
+}
+.player__volume{
+    width: 250px;
+    background-color: green;
 }
