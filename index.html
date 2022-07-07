@@ -21,18 +21,27 @@
                     <img class="small__logo" src="./img/logo-small.svg" alt="">
                 </div>
                 <div class="nav__menu">
-                    <a class="home" href="#">
-                        <img src="./img/home.svg" alt="">
-                        <span>Home</span>
-                    </a>
-                    <a class="search" href="#">
-                        <img src="./img/search.svg" alt="">
-                        <span>Cerca</span>
-                    </a>
-                    <a class="library" href="#">
-                        <img src="./img/libreria.svg" alt="">
-                        <span>La tua libreria</span>
-                    </a>
+                    <input type="radio" id="home-check" name="nav__animation">
+                        <label class="btn" for="home-check">
+                            <a class="home">
+                                <img src="./img/home.svg" alt="">
+                                <span>Home</span>
+                            </a>        
+                        </label>
+                    <input type="radio" id="search-check" name="nav__animation">
+                        <label class="btn" for="search-check">
+                            <a class="search">
+                                <img src="./img/search.svg" alt="">
+                                <span>Cerca</span>
+                            </a>
+                        </label>
+                    <input type="radio" id="library-check" name="nav__animation">
+                        <label class="btn" for="library-check">   
+                            <a class="library" >
+                                <img src="./img/libreria.svg" alt="">
+                                <span>La tua libreria</span>
+                            </a>
+                        </label>
                 </div>
                 <div class="playlist-title">
                     <h5>PLAYLIST</h5>
@@ -41,6 +50,7 @@
                         <span>Crea Playlist</span>
                     </a>
                 </div>
+                <!-- elenco playlist separato con flex-grown 1 e overflow y -->
                 <div class="playlist">
                     <ul>
                         <li><a href="#">Nuova Playlist</a></li>
@@ -87,11 +97,50 @@
             <section class="main-content">
                 <div class="upgrade-bar">
                     <div>
-                        <a class="upgrade-button" href="#">EFFETTUA L'UPGRADE</a>
+                        <a class="upgrade-button" href="#">
+                            <span>EFFETTUA L'UPGRADE</span> 
+                        </a>
                     </div>
                 </div>
                 <div class="main-content__menu">
-                    
+                    <ul>
+                        <li>
+                            <input type="radio" id="check1" name="menu__animation">
+                            <label class="btn" for="check1">
+                                <span>IN EVIDENZA<span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="check2" name="menu__animation">
+                            <label class="btn" for="check2">
+                                <span>PODCAST<span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="check3" name="menu__animation">
+                            <label class="btn" for="check3">
+                                <span>CLASSIFICHE</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="check4" name="menu__animation">
+                            <label class="btn" for="check4">
+                                <span>GENERI E MOOD</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="check5" name="menu__animation">
+                            <label class="btn" for="check5">
+                                <span>NUOVE USCITE</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="check6" name="menu__animation">
+                            <label class="btn" for="check6">
+                                <span> SCOPRI</span>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
                 <section class="recently-played">
                     <h2 class="played__title">Recently played</h2>
@@ -172,7 +221,7 @@
                 <a href="#"><i class="fas fa-volume-up"></i></a>
             </div>
             <div class="volume__bar">
-                <div class="realtime-bar">
+                <div class="realtime-bar volume__realtime-bar">
                     <!-- pallino che comparirà in hover-->
                     <div class="point-bar"></div>
                 </div>
