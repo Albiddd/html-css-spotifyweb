@@ -69,6 +69,17 @@ main{
     height: 100%;
 }
 
+/* GRID */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 1.75rem 1.75rem;
+}
+.col{
+    flex-basis: 0;
+    flex-grow: 1;
+}
 
 /* NUOVA SEZIONE */
 /* MAIN NAV */
@@ -293,6 +304,23 @@ MAIN NAV MOBILE
 #check6:checked + label > span {
     border-bottom:2px solid var(--hover-green) ;
 }
+
+
+/* RECENTLY PLAYED SECTION */
+
+.recently-played img{
+    max-width: 100%;
+}
+.recently-played h2, h5, h6{
+    color: white;
+}
+.recently-played h5{
+    font-size: 18px;
+}
+.recently-played h6{
+    color: var(--text-color);
+}
+
 
 /* **********************
 MAIN-CONTENT MENU MOBILE
