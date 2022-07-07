@@ -1,19 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+
+:root{
+    /* colors */
+    --nav-bg: black;
+    --main-bg: #141922;
+    --player-bg: #282828;
+    --upgrade-bar-bg: rgba(0, 0, 8, 0.6);
+    --text-color: #A3A3A3;
+    --hover-green: #ADFF2F;
+    /* transition times */
+    --main-transition: 400ms;
+}
+
+
+/* GENERAL */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-:root{
-    --nav-bg: black;
-    --main-bg: #141922;
-    --player-bg: #282828;
-    --upgrade-bar-bg: rgba(0, 0, 0, 0.6);
-    --text-color: #A3A3A3;
+    font-family: 'Montserrat', sans-serif;
 }
 
 ul,ol,menu{
@@ -21,32 +27,175 @@ ul,ol,menu{
 }
 a{
     text-decoration: none;
+    color: var(--text-color);
 }
+a:hover{
+    color: white;
+    transition: var(--main-transition);
+}
+/* scrollbar */
+  /* width */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+  /*colore racciato scrollbar*/
+*::-webkit-scrollbar-track {
+    background: transparent; 
+}
+   
+  /*colore barra*/
+*::-webkit-scrollbar-thumb {
+    background: grey;
+}
+  
+  /*hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7); 
+}
+  
 
 .vp-container{
-    height: 100vh;
+    height: calc(100vh - 90px);
     width: 100%;
+    overflow: hidden;
 }
 main{
     display: flex;
     height: 100%;
 }
 
+
+/* NUOVA SEZIONE */
 /* MAIN NAV */
 .main-nav{
     width: 250px;
     height: 100%;
     background-color: var(--nav-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.logo{
+    padding-top: 1.25rem;
     color: white;
-    padding-left: 20px;
+    padding-left: 1.25rem;
+}
+.big__logo{
+    width: 70%;
+}
+.small__logo {
+    display: none;
+}
+
+.nav__menu a{
+   display: block; 
+   padding: 4px 0 4px 1.25rem;
+}
+.nav__menu img{
+    width: 13%;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+.nav__menu span{
+    vertical-align: middle;
+}
+/* Main-nav menu hover */
+.nav__menu a:hover img{
+    opacity: 1;
+}
+.nav__menu a:active{
+    border-left: 4px solid var(--hover-green);
+    padding-left: calc(1.25rem - 4px);
+}
+/* playlist */
+.playlist-title{
+    padding-left: 1.25rem;
+}
+.playlist-title h5{
+    color: white;
+    padding-bottom: 8px;
+}
+.playlist-title a{
+    display: block;
+}
+.playlist-title .fa-square-plus{
+    font-size: 40px;
+    vertical-align: middle;
+}
+.playlist-title span{
+    vertical-align: middle;
+}
+.playlist{
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-left: 1.25rem;
+}
+.playlist li{
+    padding-bottom: 20px;
+}
+.playlist a{
+    padding: 10px 0;
+}
+
+/* user */
+.bottom__nav{
+    padding: 0 1.25rem 0 1.25rem;
+}
+.install{
+    display: block;
+    padding-bottom: 8px;
+}
+.install img{
+    width: 13%;
+    vertical-align: middle;
+    opacity: 0.5;
+    padding-right: 8px;
+}
+.install span{
+    vertical-align: middle;
+}
+.install:hover img{
+    opacity: 1;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: var(--text-color);    
+}
+.user{
+    display: block;
+    padding: 14px 0;
+}
+.user img{
+    width: 12%;
+    background-color: gray;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.user span{
+    font-weight: 600;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+.user:hover img{
+    transform: scale(1.3);
+    transition: var(--main-transition);
 }
 
 
+/* NUOVA SEZIONE */
 /* MAIN CONTENT */
 .main-content{
     width: calc(100% - 250px);
     height: 100%;
     background-color: var(--main-bg);
+    flex-direction: column;
+    overflow: auto;
 }
 /* Top bar */
 .upgrade-bar{
@@ -63,9 +212,11 @@ main{
     border: 1px solid var(--text-color);
     border-radius: 40px;
     padding: 15px 35px;
-    margin-right: 2rem;
+    margin-right: 0.75rem;
 }
 
+
+/* NUOVA SEZIONE */
 /* PLAYER */
 .player{
     width: 100%;
@@ -79,13 +230,13 @@ main{
     
 }
 
+/* song sx*/
 .player__song{
     display: flex;
     width: 250px;   
     align-items: center; 
     padding: 1rem 0 1rem 0.75rem;
 }
-
 .song__cover{
     height: 100%;
 }
@@ -95,9 +246,7 @@ main{
 .song__name{
     margin: 0 30px 0 20px;
 }
-.song__name a{
-    color: var(--text-color);
-}
+
 .song__name a h4{
     color: white;
 }
@@ -105,27 +254,35 @@ main{
     font-weight: 500;
 }
 .song__favourite i{
-    color: var(--text-color);
     font-size: 1.2rem;
     margin-left: 12px;
 }
 
+/* toolbar centrale */
 .player__toolbar{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 0.5rem;
     max-width: 700px; 
     flex-grow: 1;  
     padding: 0 50px;
 }
 .toolbar__button ul{
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 1.5rem;
 }
 .toolbar__button a{
-    color: var(--text-color);
-    font-size: 25px;
+    font-size: 20px;
+}
+.toolbar__button .big__button{
+    font-size: 30px;
+}
+.toolbar__button .big__button:hover i{
+    transform: scale(1.3);
+    transition: var(--main-transition);
 }
 .toolbar__time{
     display: flex;
@@ -142,7 +299,42 @@ main{
     background-color: var(--text-color);
     flex-grow: 1;
 }
+.time__bar .realtime-bar{
+    position: relative;
+    height: 100%;
+    width: 15%;
+    border-radius: 4px;
+    background-color: white;    
+}
+
+/* time bar hover */
+.time__bar .realtime-bar:hover{
+    background-color: var(--hover-green);
+    cursor: pointer;
+}
+.realtime-bar:hover .point-bar{
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    aspect-ratio: 1;
+    height: 300%;
+    border-radius: 50%;
+    background-color: white;   
+}
+
+/* volume dx */
 .player__volume{
     width: 250px;
-
+    display: flex;
+    align-items: center;
+    padding-right: 0.75rem;
+}
+.volume__items a{
+    margin-right: 0.75rem;
+}
+.volume__bar{
+    height: 4px;
+    border-radius: 4px;
+    background-color: grey;
+    flex-grow: 1;
 }
