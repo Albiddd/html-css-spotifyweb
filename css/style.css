@@ -263,7 +263,7 @@ MAIN NAV MOBILE
     border: 1px solid var(--text-color);
     border-radius: 40px;
     padding: 14px 30px;
-    margin-right: 1.25rem;
+    margin-right: 2rem;
     display: block;
 }
 .upgrade-button:hover span{
