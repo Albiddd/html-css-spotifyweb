@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- viewport container -->
+    <!-- Viewport container -->
     <div class="vp-container">
         <main>
-            <!-- sidebar playlist -->
+            <!-- Sidebar playlist -->
             <nav class="main-nav">
                 <div class="logo">
                     <img class="big__logo" src="./img/logo.svg" alt="">
                     <img class="small__logo" src="./img/logo-small.svg" alt="">
                 </div>
+                <!-- Menu top del main nav -->
                 <div class="nav__menu">
                     <input type="radio" id="home-check" name="nav__animation">
                         <label class="btn" for="home-check">
@@ -43,6 +44,7 @@
                             </a>
                         </label>
                 </div>
+                <!-- Pulsante creazione playlist -->
                 <div class="playlist-title">
                     <h5>PLAYLIST</h5>
                     <a href="#">
@@ -79,6 +81,7 @@
                         <li><a href="#">Nuova Playlist</a></li>
                     </ul>
                 </div>
+                <!-- Bottom nav della main nav con sezione install e user separati da un div che funge da linea -->
                 <div class="bottom__nav">
                     <a class="install" href="#">
                         <img src="./img/download.svg" alt="">
@@ -93,18 +96,21 @@
 
             </nav>
             
-            <!-- main section con flex column -->
+            <!-- Main section con flex column -->
             <section class="main-content">
                 <div class="upgrade-bar">
+                    <!-- Barra superiore del main content con position fixed e trasparenza -->
                     <div>
                         <a class="upgrade-button" href="#">
                             <span>EFFETTUA L'UPGRADE</span> 
                         </a>
                     </div>
                 </div>
+                <!-- Lista con menu del main content -->
                 <div class="main-content__menu">
                     <ul>
                         <li>
+                            <!-- Utilizzo di radio button per simulare la selezione univoca dell'elemento del menu -->
                             <input type="radio" id="check1" name="menu__animation">
                             <label class="btn" for="check1">
                                 <span>IN EVIDENZA<span>
@@ -142,12 +148,15 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Prima sezione del main content "recently played"-->
                 <section class="recently-played">
                     <h2 class="section__title">Recently played</h2>
+                    <!-- Struttura della grid con flex riutilizzabile per le altre sezioni -->
                     <div class="row">
                         <div class="col">
                             <div class="card">
                                 <figure>
+                                    <!-- Overlay in trasparenza che comparirà in hover sull'immagine della card -->
                                     <div class="overlay">
                                         <i class="far fa-play-circle"></i>
                                     </div>
@@ -224,6 +233,7 @@
                         </div>
                     </div>
                 </section>
+                <!-- Seconda sezione del main content "creato per te" -->
                 <section class="for-you">
                     <h2 class="section__title">Creato per Alberto Dore</h2>
                     <h6 class="section__subtitle">Più ascolti, più accurati saranno i suggerimenti.</h6>
@@ -253,6 +263,7 @@
                         </div>
                     </div>
                 </section>
+                <!-- Terza sezione del main content "artisti più popolari" -->
                 <section class="popular">
                     <h2 class="section__title">Artisti più popolari</h2>
                     <h6 class="section__subtitle">Più ascolti, più accurati saranno i suggerimenti.</h6>
@@ -286,12 +297,16 @@
         </main>
     </div>
 
+    <!-- Barra inferiore del player con position fixed  -->
     <aside class="player">
+        <!-- Sezione con canzone in riproduzione-->
         <div class="player__song">
+            <!-- immagine -->
             <div class="song__cover">
                 <img src="./img/sinister.jpeg" alt="">
                 <i class="fa-solid fa-chevron-up"></i>
             </div>
+            <!-- nome canzone -->
             <div class="song__name">
                 <a href="#">
                     <h4>Sinister</h4>
@@ -300,6 +315,7 @@
                     <h5>Artista</h5>
                 </a>
             </div>
+            <!-- pulsanti con icone -->
             <div class="song__favourite">
                 <a href="#">
                     <i class="fa-regular fa-heart"></i>
@@ -309,7 +325,9 @@
                 </a>
             </div>
         </div>
+        <!-- Tollbar centrale del player con flex column -->
         <div class="player__toolbar">
+            <!-- Pulsanti superiori della toolbar con flex row -->
             <div class="toolbar__button">
                 <ul>
                     <li>
@@ -329,10 +347,12 @@
                     </li>
                 </ul>
             </div>
+            <!-- Contenitore con barra del tempo di riproduzione -->
             <div class="toolbar__time">
                 <div class="time_left">0:30</div>
                 <!-- contenitore barra riproduzione -->
                 <div class="time__bar">
+                    <!-- barra di avanzamento -->
                     <div class="realtime-bar">
                     <!-- pallino che comparirà in hover-->
                     <div class="point-bar"></div>
@@ -341,6 +361,7 @@
                 <div class="time__right">4:20</div>
             </div>
         </div>
+        <!-- Sezione con volume del player -->
         <div class="player__volume">
             <div class="volume__items">
                 <a href="#"><i class="fas fa-list-ul"></i></a>
