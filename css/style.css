@@ -643,3 +643,8 @@ VOLUME RESPONSIVE
         margin-right: 3px;
     }
 }
+@media screen and (max-width: 553px) {
+    .player__volume{
+        width: 140px;
+    }
+}
