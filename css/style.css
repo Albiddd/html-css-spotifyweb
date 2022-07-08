@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-
+/* VARIABILI */
 :root{
     /* colors */
     --nav-bg: black;
@@ -37,7 +37,7 @@ a:hover{
     transition: var(--main-transition);
     cursor: pointer;
 }
-/* scrollbar */
+/* SCROLLBAR*/
   /* width */
 *::-webkit-scrollbar {
     width: 12px;
@@ -58,7 +58,7 @@ a:hover{
     background: rgba(255, 255, 255, 0.7); 
 }
   
-
+/* LAYOUT DELLA WEB APP */
 .vp-container{
     height: calc(100vh - 90px);
     width: 100%;
@@ -69,7 +69,7 @@ main{
     height: 100%;
 }
 
-/* GRID */
+/* REGOLE GENERICHE DELLA GRIGLIA DEL MAIN CONTENT*/
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +79,7 @@ main{
     flex-basis: calc(100% / 6 - 1rem);
     
 }
+/* Fine delle regole generiche */
 
 /* NUOVA SEZIONE */
 /* MAIN NAV */
@@ -132,7 +133,7 @@ main{
     transition: 0ms;
 }
 
-/* playlist */
+/* Titolo sezione playlist e pulsante creazione nuova */
 .playlist-title{
     padding-left: 1.25rem;
 }
@@ -150,6 +151,7 @@ main{
 .playlist-title span{
     vertical-align: middle;
 }
+/* elenco delle playlist disponibili con overflow Y */
 .playlist{
     flex-grow: 1;
     overflow-y: auto;
@@ -163,7 +165,7 @@ main{
     padding-right: 85px;
 }
 
-/* user */
+/* Sezione bottom main-nav, download button più */
 .bottom__nav{
     padding: 0 1.25rem 0 1.25rem;
 }
@@ -207,7 +209,7 @@ main{
 }
 
 /* **********************
-MAIN NAV MOBILE
+MAIN NAV RESPONSIVE
 ************************* */
 @media screen and (max-width: 553px) {
     .main-nav{
@@ -283,7 +285,7 @@ MAIN NAV MOBILE
 }
 
 /* **********************
-UPGRADE BUTTON MOBILE
+UPGRADE BUTTON RESPONSIVE
 ************************* */
 @media screen and (max-width: 553px) {
     .upgrade-button span{
@@ -306,7 +308,7 @@ UPGRADE BUTTON MOBILE
     font-weight: 600;
 }
 
-/* Hover + selezione elemento utilizzanto il radio button  */
+/* Hover + selezione elemento utilizzanto il radio button e :checked per simulare la selizione di un elemento dal menu  */
 .main-content span:hover{
     color: white;
     transition: var(--main-transition);
@@ -352,14 +354,15 @@ UPGRADE BUTTON MOBILE
     color: var(--text-color);
 }
 
-/* FOR YOU */
+/* FOR YOU SECTION*/
 .for-you{
     padding: 1.75rem;
 }
 .section__subtitle{
     padding: 7px 0 30px 0;
 }
-/* POPULAR */
+
+/* POPULAR SECTION*/
 .popular {
     padding: 1.75rem;
 }
@@ -368,7 +371,6 @@ UPGRADE BUTTON MOBILE
 }
 
 /* IMG OVERLAY */
-
 .card figure{
     position: relative;
 }
@@ -384,7 +386,6 @@ UPGRADE BUTTON MOBILE
     align-items: center;
     font-size: 70px;
 }
-
 .popular .overlay{
     border-radius: 50%;
 }
@@ -394,7 +395,7 @@ UPGRADE BUTTON MOBILE
 }
 
 /* **********************
-MAIN-CONTENT MENU MOBILE
+MAIN-CONTENT  RESPONSIVE
 ************************* */
 @media screen and (max-width: 1200px) {
     .col{
@@ -431,8 +432,6 @@ MAIN-CONTENT MENU MOBILE
         padding: 0.5rem 0;
     }
 }
-
-
 @media screen and (max-width:553px) {
     .main-content{
         width: calc(100% - 60px);
@@ -447,7 +446,7 @@ MAIN-CONTENT MENU MOBILE
 }
 
 /* NUOVA SEZIONE */
-/* PLAYER */
+/* PLAYER BOTTOM BAR*/
 .player{
     width: 100%;
     height: 90px;
@@ -460,7 +459,7 @@ MAIN-CONTENT MENU MOBILE
     
 }
 
-/* song sx*/
+/* PLAYER SONG INFO SX*/
 .player__song{
     display: flex;
     max-width: 300px;   
@@ -500,8 +499,9 @@ MAIN-CONTENT MENU MOBILE
     font-size: 1.2rem;
     margin-left: 10px;
 }
+
 /* **********************
-PLAYER SONG TABLET
+PLAYER SONG RESPONSIVE
 ************************* */
 @media screen and (max-width: 640px) {
     .song__cover{
@@ -514,9 +514,6 @@ PLAYER SONG TABLET
         margin-left: 6px;
     }   
 }
-/* **********************
-PLAYER SONG MOBILE
-************************* */
 @media screen and (max-width: 553px) {
     .song__cover{
         height: 90%;
@@ -539,7 +536,7 @@ PLAYER SONG MOBILE
     }
 }
 
-/* toolbar centrale */
+/* PLAYER TOOLBAR CENTRALE */
 .player__toolbar{
     display: flex;
     justify-content: center;
@@ -587,8 +584,7 @@ PLAYER SONG MOBILE
     border-radius: 4px;
     background-color: white;    
 }
-
-/* time bar hover */
+/* Time bar hover */
 .realtime-bar:hover{
     background-color: var(--hover-green);
     cursor: pointer;
@@ -603,7 +599,7 @@ PLAYER SONG MOBILE
     background-color: white;   
 }
 
-/* volume dx */
+/* VOLUME PLAYER DX*/
 .player__volume{
     width: 280px;
     display: flex;
@@ -624,7 +620,7 @@ PLAYER SONG MOBILE
 }
 
 /* **********************
-VOLUME MOBILE
+VOLUME RESPONSIVE
 ************************* */
 @media screen and (max-width: 820px) {
     .player__volume{
