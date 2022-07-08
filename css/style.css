@@ -234,7 +234,15 @@ MAIN NAV MOBILE
     }
     .install img{
         width: 35px;
-        margin-left: -4px;
+        margin-left: -3px;
+    }
+    .install:hover img{
+        transform: scale(1.3);
+        transition: var(--main-transition);
+    }
+    .user:hover img{
+        transform: scale(1.3);
+        transition: var(--main-transition);
     }
 }
 
@@ -275,7 +283,7 @@ MAIN NAV MOBILE
 }
 
 /* **********************
-MAIN NAV MOBILE
+UPGRADE BUTTON MOBILE
 ************************* */
 @media screen and (max-width: 553px) {
     .upgrade-button span{
