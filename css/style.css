@@ -159,6 +159,7 @@ main{
 }
 .playlist a{
     padding: 10px 0;
+    padding-right: 85px;
 }
 
 /* user */
@@ -272,6 +273,15 @@ MAIN NAV MOBILE
     transition: var(--main-transition);
 }
 
+/* **********************
+MAIN NAV MOBILE
+************************* */
+@media screen and (max-width: 553px) {
+    .upgrade-button span{
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+}
 /* Main content menu */
 .main-content__menu ul{
     display: flex;
@@ -311,8 +321,10 @@ MAIN NAV MOBILE
     padding: 1.75rem;
 }
 .card img{
-    max-width: 100%;
-    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;    
 }
 .recently-played h2{
     padding-bottom: 30px;
@@ -405,6 +417,10 @@ MAIN-CONTENT MENU MOBILE
      .col{
         flex-basis: calc(100% / 2 - 1rem);
      }
+     .main-content h5{
+        font-size: 15px;
+        padding: 0.5rem 0;
+    }
 }
 
 
@@ -444,9 +460,22 @@ MAIN-CONTENT MENU MOBILE
 }
 .song__cover{
     height: 100%;
+    position: relative;
 }
 .song__cover img{
     height: 100%;
+}
+.song__cover i{
+    display: none;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 4px;
+    background-color: rgba(0, 0, 8, 0.8);
+    color: whitesmoke;
+    animation: var(--main-transition);
 }
 .song__name{
     margin: 0 20px 0 20px;
@@ -481,13 +510,23 @@ PLAYER SONG MOBILE
 ************************* */
 @media screen and (max-width: 553px) {
     .song__cover{
-        height: 70%;
+        height: 90%;
     }
     .song__name{
         margin: 0 5px 0 10px;
     }
     .song__favourite{
         margin-left: 0;
+    }
+    .song__name{
+        display: none;
+    }
+    .song__favourite{
+        display: none;
+    }
+    .song__cover:hover i{
+        display: block;
+        cursor: pointer;
     }
 }
 
@@ -557,7 +596,7 @@ PLAYER SONG MOBILE
 
 /* volume dx */
 .player__volume{
-    width: 230px;
+    width: 280px;
     display: flex;
     align-items: center;
     padding-right: 0.75rem;
@@ -578,12 +617,11 @@ PLAYER SONG MOBILE
 /* **********************
 VOLUME MOBILE
 ************************* */
-@media screen and (max-width: 553px) {
+@media screen and (max-width: 640px) {
     .player__volume{
         width: 180px;
     }
     .volume__items a{
         margin-right: 3px;
     }
-
 }
