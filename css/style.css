@@ -592,9 +592,10 @@ PLAYER SONG RESPONSIVE
 .realtime-bar:hover .point-bar{
     position: absolute;
     right: -4px;
-    top: -4px;
+    top: 50%;
+    transform: translateY(-50%);
     aspect-ratio: 1;
-    height: 300%;
+    height: 12px;
     border-radius: 50%;
     background-color: white;   
 }
