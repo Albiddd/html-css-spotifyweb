@@ -577,12 +577,24 @@ PLAYER SONG RESPONSIVE
     background-color: var(--text-color);
     flex-grow: 1;
 }
+/* Barra live con animazione */
 .realtime-bar{
     position: relative;
     height: 100%;
     width: 15%;
     border-radius: 4px;
-    background-color: white;    
+    background-color: white;   
+}
+.toolbar__time .realtime-bar{
+    animation: play 40s linear forwards;  
+}
+@keyframes play {
+    30%{
+        width: 30%;
+    }
+    100%{
+        width: 100%;
+    }
 }
 /* Time bar hover */
 .realtime-bar:hover{
