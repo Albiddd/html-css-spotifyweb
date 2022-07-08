@@ -129,6 +129,7 @@ main{
 #library-check:checked + label  a{
     border-left: 4px solid var(--hover-green);
     padding-left: calc(1.25rem - 4px);
+    transition: 0ms;
 }
 
 /* playlist */
